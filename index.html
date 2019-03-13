@@ -64,6 +64,8 @@ window.addEventListener('keydown', function(e) {
   const pressedKey = document.querySelector(`.key[data-key="${e.keyCode}"]`);
 
   if (!playSound) return;
+
+  playSound.play();
 });
 
 </script>
