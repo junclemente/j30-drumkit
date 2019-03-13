@@ -65,6 +65,7 @@ window.addEventListener('keydown', function(e) {
 
   if (!playSound) return;
 
+  playSound.currentTime=0;
   playSound.play();
 });
 
