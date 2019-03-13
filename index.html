@@ -72,7 +72,6 @@ function playDrums(e) {
   pressedKey.classList.add('playing');
 }
 
-window.addEventListener('keydown', playDrums);
 
 function removeTransition(e) {
   if (!e.propertyName == "transform") {
@@ -82,11 +81,8 @@ function removeTransition(e) {
 }
 
 const keys = document.querySelectorAll('.key');
-// keys.forEach(function(key) {
-//   key.addEventListener('transitionend', removeTransition);
-// });
-
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+window.addEventListener('keydown', playDrums);
 
 </script>
 
